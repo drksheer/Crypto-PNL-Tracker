@@ -16,6 +16,7 @@ This script generates a database for which the Crypto PNL tracker uses as a plug
 1. Edit `$global:path` in `get-accountData.ps1` and set this to the root of where you are running the Crypto Tracker from, suffixed with `db-files`. Eg. `D:\crypto\pnl-tracker\db-files`.
 3. Move Daisy's `settings.json` file across to this new db storage folder.
 4. Edit `settings.json` and configure as many accounts as you would like to track, by filling in the fields and ensuring `"enabled": "true"` for accounts you wish to import.
+    - It's best to set your `start` date to the start date of, or as close as you can to when your Binance/Bybit account was created. If you specify an arbitrary date which is much earlier than the acccount start date, the import may only process the last 30 or so days. You can use your [Binance PNL](https://www.binance.com/en-AU/my/wallet/futures/balance/analysis) to check this.
 5. Run `get-accountData.ps1` from PowerShell as Administrator (Start menu -> PowerShell -> Right click, Run as Administrator). Navigate to the directory and type `.\get-accountData.ps1`.
 6. This will commence data import. **This may take up to 15 minutes.** After that, it will continue to import every 10 amount of minutes. Leave this process running to keep your data up to date.
 7. While this is running you can setup the tracker..
@@ -47,6 +48,3 @@ This script generates a database for which the Crypto PNL tracker uses as a plug
     - *Multiple accounts:* You can setup multiple accounts by copying the entire account property from `{` to `}`, and pasting it again separating it by a comma.
 3. Run `PNLTracker.exe` this should launch a web server and your results will be available on http://localhost:5000 once all data has been imported.
 4. Keep Daisy's PowerShell script running in the background to automatically keep your data up-to-date.
-
-## Tips when setting up Daisy's settings.json file
-- It's best to set your `start` date to the start date of, or as close as you can to when your Binance/Bybit account was created. If you specify an arbitrary date which is much earlier than the acccount start date, the import may only process the last 30 or so days.
