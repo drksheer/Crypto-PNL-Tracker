@@ -7,7 +7,7 @@ You will need four things: -
 2. Daisy's Binance/Bybit import script and settings file. *Most likely you want this, unless you are wanting to manage your PNL data manually*. Download and unzip all this to the one location.
 3. For now just download everything from this repo to get that.
 4. Daisy's script also relies on PowerShell 5.0+, you probably already have it if you run Windows, if not, [grab it here](https://aka.ms/powershell-release?tag=stable).
-5. [Microsoft .NET 5.0 Runtime](https://dotnet.microsoft.com/download) if you don't already have it.
+5. [Microsoft .NET 5.0 Runtime](https://dotnet.microsoft.com/download) if you don't already have it (Had reports entire SDK may need to be installed, can someone confirm this?).
 
 A lot of configuration below uses the JSON-file format. **If you are new to this, becareful not to disrupt the curly braces or double quotes or you might break things.**
 
@@ -18,7 +18,7 @@ This script generates a database for which the Crypto PNL tracker uses as a plug
 3. Move Daisy's `settings.json` file across to this new db storage folder.
 4. Edit `settings.json` and configure as many accounts as you would like to track, by filling in the fields and ensuring `"enabled": "true"` for accounts you wish to import.
     - It's best to set your `start` date to the start date of, or as close as you can to when your Binance/Bybit account was created. If you specify an arbitrary date which is much earlier than the acccount start date, the import may only process the last 30 or so days. You can use your [Binance PNL](https://www.binance.com/en-AU/my/wallet/futures/balance/analysis) to check this.
-5. Run `get-accountData.ps1` from PowerShell as Administrator (Start menu -> PowerShell -> Right click, Run as Administrator). Navigate to the directory and type `.\get-accountData.ps1`.
+5. Run `get-accountData.ps1` from PowerShell as Administrator (Start menu -> PowerShell -> Right click, Run as Administrator). Navigate to the directory and type `.\get-accountData.ps1`. (If you get an error about PS scripts being unable to be executed, you mean to run `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned` in PS first)
 6. This will commence data import. **This may take up to 15 minutes.** After that, it will continue to import every 10 amount of minutes. Leave this process running to keep your data up to date.
 7. While this is running you can setup the tracker..
 
