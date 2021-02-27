@@ -8,7 +8,7 @@ If (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
 Install-Module PSSQLite
 Import-Module PSSQLite
 
-$global:path = "H:\dev\projects\apps\pnl-tracker\PNLTracker\db-files"
+$global:path = "D:\crypto\pnl-tracker\db-files"
 $global:DataSource = "$($path)\accountData.db"
 $global:Logfile = "$($path)\accountData.log"
 $refresh = 10 # minutes
