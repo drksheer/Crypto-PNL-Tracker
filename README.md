@@ -16,7 +16,7 @@ A lot of configuration below uses the JSON-file format. **If you are new to this
 This script generates a database for which the Crypto PNL tracker uses as a plugin, so first step is importing your data.
 1. Edit `$global:path` in `get-accountData.ps1` and set this to the root of where you are running the Crypto Tracker from, suffixed with `db-files`. Eg. `D:\crypto\pnl-tracker\db-files`.
 3. Move Daisy's `settings.json` file across to this new db storage folder.
-4. Edit `settings.json` and configure as many accounts as you would like to track, by filling in the fields and ensuring `"enabled": "true"` for accounts you wish to import.
+4. Edit `settings.json` and configure as many accounts as you would like to track, by filling in the fields and `"enabled": "true"` for accounts you wish to import.
     - It's best to set your `start` date to the start date of, or as close as you can to when your Binance/Bybit account was created. If you specify an arbitrary date which is much earlier than the acccount start date, the import may only process the last 30 or so days. You can use your [Binance PNL](https://www.binance.com/en-AU/my/wallet/futures/balance/analysis) to check this.
 5. Run `get-accountData.ps1` from PowerShell as Administrator (Start menu -> PowerShell -> Right click, Run as Administrator). Navigate to the directory and type `.\get-accountData.ps1`. (If you get an error about PS scripts being unable to be executed, you mean to run `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned` in PS first)
 6. This will commence data import. **This may take up to 15 minutes.** After that, it will continue to import every 10 amount of minutes. Leave this process running to keep your data up to date.
@@ -27,6 +27,7 @@ This script generates a database for which the Crypto PNL tracker uses as a plug
     - Edit the values appropriately to your setup. Ensuring `"enabled": true`.
     - **If using Binance/Bybit import:**
         - Ensure `dbFileName` is set to the relative location to tracker root of where your database file is being generated (See setup instructions).
+        - `accountName` is the same as specified in the `name` property in Daisy `setings.json`.
         - A basic setup should look like this,
         ```
         {
