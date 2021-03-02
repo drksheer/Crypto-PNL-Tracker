@@ -15,16 +15,16 @@ A lot of configuration below uses the JSON-file format. **If you are new to this
 ### 2) Run Daisy's Binance/Bybit Data Import
 This script generates a database for which the Crypto PNL tracker uses as a plugin, so first step is importing your data.
 1. Download [Daisy's automatic import script](https://github.com/daisy613/accountData) the settings file into the tracker folder. Follow the setup instructions on that page.
-2. Run `accountData.ps1` from PowerShell as Administrator (Start menu -> PowerShell -> Right click, Run as Administrator). Navigate to the directory and type `.\accountData.ps1`. (If you get an error about PS scripts being unable to be executed, you mean to run `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned` in PS first)
-3. This will commence data import. **This may take up to 15 minutes.** After that, it will continue to import every 10 amount of minutes. Leave this process running to keep your data up to date.
-4. While this is running you can setup the tracker..
+2. Run `accountData.ps1` from PowerShell as Administrator (Start menu -> PowerShell -> Right click, Run as Administrator). Navigate to the directory and type `.\accountData.ps1`.
+3. This will commence data import. **This may take up a while depending on how old the account is - about 10 mins per month of the account.** When the first import occurs, the green message will say "Import Complete". After that, it will continue to import every 10 minutes. Leave this process running to keep your data up to date.
+4. Now you can proceed to the tracker setup.
 
 ### 2) Running the Tracker
 1. Edit the JSON file format `accounts.json` in the root of the Crypto Tracker.
     - Edit the values appropriately to your setup. Ensuring `"enabled": true`.
-    - **If using Binance/Bybit import:**
+    - **If using Daisy's Binance/Bybit import:**
         - Ensure `dbFileName` is set to the relative location to tracker root of where your database file is being generated (See setup instructions).
-        - `accountName` is the same as specified in the `name` property in Daisy `accountData.json`.
+        - `accountName` is the same as specified in the `name` property in Daisy's `accountData.json`.
         - A basic setup should look like this,
         ```
         {
@@ -41,6 +41,7 @@ This script generates a database for which the Crypto PNL tracker uses as a plug
             "PNL": []
         }
         ```
+        - make sure that the `dbFileName` is set as a folder relative to the location of the tracker executable, and you use the forward-slach character. Use the default value unless you have an advanced custom setup and you know what you are doing.
         - `fromDate` should be left null unless you wish to specify tracking to occur from a certain date on the chart. Eg. "2012-01-01" to only build the graph from 1st Jan onwards.
     - **If manually tracking:**
         - Edit the `"PNL"` value array manually setting a UTC-compatible date and decimal for each day.
