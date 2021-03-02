@@ -23,8 +23,6 @@ This script generates a database for which the Crypto PNL tracker uses as a plug
 1. Edit the JSON file format `accounts.json` in the root of the Crypto Tracker.
     - Edit the values appropriately to your setup. Ensuring `"enabled": true`.
     - **If using Daisy's Binance/Bybit import:**
-        - Ensure `dbFileName` is set to the relative location to tracker root of where your database file is being generated (See setup instructions). Make sure to use the forward-slash character. Use the default value unless you have an advanced custom setup and you know what you are doing.
-        - `accountName` is the same as specified in the `name` property in Daisy's `accountData.json`.
         - A basic setup should look like this,
         ```
         {
@@ -41,6 +39,8 @@ This script generates a database for which the Crypto PNL tracker uses as a plug
             "PNL": []
         }
         ```
+        - Ensure `dbFileName` is set to the relative location to tracker root of where your database file is being generated (See setup instructions). Make sure to use the forward-slash character. Use the default value unless you have an advanced custom setup and you know what you are doing.
+        - `accountName` is the same as specified in the `name` property in Daisy's `accountData.json`.
         - `fromDate` should be left null unless you wish to specify tracking to occur from a certain date on the chart. Eg. "2012-01-01" to only build the graph from 1st Jan onwards.
     - **If manually tracking:**
         - Edit the `"PNL"` value array manually setting a UTC-compatible date and decimal for each day.
