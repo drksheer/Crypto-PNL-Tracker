@@ -21,7 +21,7 @@ This script generates a database for which the Crypto PNL tracker uses as a plug
 
 ### 2) Running the Tracker
 1. Edit the JSON file format `accounts.json` in the root of the Crypto Tracker.
-    - Edit the values appropriately to your setup. Ensuring `"enabled": true`.
+    - Edit the values appropriately to your setup. Ensuring `"enabled": true` and change `startBalance` from null to a number if your original balance cannot be obtained in the import.
     - **If using Daisy's Binance/Bybit import:**
         - A basic setup should look like this,
         ```
@@ -29,13 +29,14 @@ This script generates a database for which the Crypto PNL tracker uses as a plug
             "account": "Primary bot",
             "enabled": true,
             "plugins": [
-            {
-                "type": "SQLiteImport",
-                "accountName": "primary",
-                "fromDate": null,
-                "dbFileName": "db-files/accountData.db"
-            }
+                {
+                    "type": "SQLiteImport",
+                    "accountName": "primary",
+                    "fromDate": null,
+                    "dbFileName": "db-files/accountData.db"
+                }
             ],
+            "startBalance": null,
             "PNL": []
         }
         ```
