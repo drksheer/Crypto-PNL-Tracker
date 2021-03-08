@@ -2,7 +2,7 @@
 A generic crypto PNL tracker which can work with Binance, Bybit or your own data.
 
 ## Requirements
-1. The actual Crypto Tracker app - download the Zip file and unzip it into a folder such as *C:\Bots\Tracker*.
+1. The actual Crypto Tracker app - [**grab the latest release**](https://github.com/drksheer/Crypto-PNL-Tracker/releases) and unzip it into a folder such as *C:\Bots\Tracker*.
 2. [Daisy's automatic import script](https://github.com/daisy613/accountData). Download the script and the settings file into the same folder as above.
 3. [Microsoft .NET 5.0 Runtime](https://dotnet.microsoft.com/download) if you don't already have it (*Had reports entire SDK may need to be installed, can someone confirm this?*).
 
@@ -10,7 +10,7 @@ A lot of configuration below uses the JSON-file format. **If you are new to this
 
 ## Getting Started
 ### 1) Get the tracker
-1. Download the Zip file for Crypto PNL tracker and unzip it into a folder such as *C:\Bots\Tracker*
+1. Unzip the Crypto PNL tracker into a folder such as *C:\Bots\Tracker*
 
 ### 2) Run Daisy's Binance/Bybit Data Import
 This script generates a database for which the Crypto PNL tracker uses as a plugin, so first step is importing your data.
