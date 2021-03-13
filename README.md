@@ -1,7 +1,7 @@
 # Crypto-PNL-Tracker
 A generic crypto PNL tracker which can work with Binance, Bybit or your own data.
 
-<img src="https://raw.githubusercontent.com/drksheer/Crypto-PNL-Tracker/main/guides/Crypto-Tracker.png" target="Crypto Tracker" height="500">
+<img src="https://raw.githubusercontent.com/drksheer/Crypto-PNL-Tracker/main/guides/Crypto-Tracker-New.png" target="Crypto Tracker" height="500">
 
 ## Requirements
 1. The actual Crypto Tracker app - [**grab the latest release**](https://github.com/drksheer/Crypto-PNL-Tracker/releases) and unzip it into a folder such as *C:\Bots\Tracker*.
@@ -51,6 +51,11 @@ This script generates a database for which the Crypto PNL tracker uses as a plug
 2. Run `PNLTracker.exe` this should launch a web server and your results will be available on http://localhost:5000 once all data has been imported.
 3. Keep Daisy's PowerShell script running in the background to automatically keep your data up-to-date.
 
+## Tips:
+- BTC: `1AUZ5tNu7awn2N6NCogwiVvx5QR3WrWjtk`
+- USDT/ETH (ERC20): `0xecbc154b21af94740cec240a3334b927a92a49e9`
+- USDT (TRC20): `TLSvrkRysLP6MXQE9jBzfFxZCcRv9qf5w9` (if sending from Binance account - allows for less fees)
+
 ### Troubleshooting
 If Rolling Balance/Cumulative Profit % does not match, or not what you expect, the tracker or the Binance API probably could not correctly determine your starting balance. So this must be set manually.
 This is done by a simple calculation,
@@ -61,8 +66,5 @@ For the below screenshot, this is the formula
 `2321.43 [Current Balance] - 1793.87 [Rolling Balance] = 527.56 [difference]`
 **Sum** this result on top of the balance you wrote into the `startBalance` field of the JSON file. Eg if difference was 50 and you wrote 100 originally, type 150.
 
+<img src="https://raw.githubusercontent.com/drksheer/Crypto-PNL-Tracker/main/guides/balanceInconsistency.png" target="Crypto Tracker">
 
-## Tips:
-- BTC: `1AUZ5tNu7awn2N6NCogwiVvx5QR3WrWjtk`
-- USDT/ETH (ERC20): `0xecbc154b21af94740cec240a3334b927a92a49e9`
-- USDT (TRC20): `TLSvrkRysLP6MXQE9jBzfFxZCcRv9qf5w9` (if sending from Binance account - allows for less fees)
