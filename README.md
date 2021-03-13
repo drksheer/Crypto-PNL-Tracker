@@ -57,7 +57,7 @@ This is done by a simple calculation,
 3. Check and hover over the graph,
 For the below screenshot, this is the formula
 `2321.43 [Current Balance] - 1793.87 [Rolling Balance] = 527.56 [difference]`
-Set this calculation result into the `startBalance` field of the JSON file.
+**Sum** this result on top of the balance you wrote into the `startBalance` field of the JSON file. Eg if difference was 50 and you wrote 100 originally, type 150.
 
 
 ## Tips:
