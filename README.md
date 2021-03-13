@@ -49,6 +49,13 @@ This script generates a database for which the Crypto PNL tracker uses as a plug
 2. Run `PNLTracker.exe` this should launch a web server and your results will be available on http://localhost:5000 once all data has been imported.
 3. Keep Daisy's PowerShell script running in the background to automatically keep your data up-to-date.
 
+### Troubleshooting
+If Rolling Balance/Cumulative Profit % does not match, or not what you expect, the tracker or the Binance API probably could not correctly determine your starting balance. So this must be set manually.
+This is done by a simple calculation:
+For the below screenshot, this is the formula
+`2321.43 - 1793.87 = 527.56 (difference)`
+Set this number into the `startBalance` field of the JSON file.
+
 ## Tips:
 - BTC: `1AUZ5tNu7awn2N6NCogwiVvx5QR3WrWjtk`
 - USDT/ETH (ERC20): `0xecbc154b21af94740cec240a3334b927a92a49e9`
