@@ -51,7 +51,10 @@ This script generates a database for which the Crypto PNL tracker uses as a plug
 
 ### Troubleshooting
 If Rolling Balance/Cumulative Profit % does not match, or not what you expect, the tracker or the Binance API probably could not correctly determine your starting balance. So this must be set manually.
-This is done by a simple calculation:
+This is done by a simple calculation,
+1. Firstly enter a number close to your estimated original balance into `startBalance` field of the JSON file. Eg. $1000.
+2. Now reload the Tracker.
+3. Check and hover over the graph,
 For the below screenshot, this is the formula
 `2321.43 - 1793.87 = 527.56 (difference)`
 Set this number into the `startBalance` field of the JSON file.
