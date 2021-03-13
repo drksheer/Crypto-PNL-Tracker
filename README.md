@@ -56,8 +56,9 @@ This is done by a simple calculation,
 2. Now reload the Tracker.
 3. Check and hover over the graph,
 For the below screenshot, this is the formula
-`2321.43 - 1793.87 = 527.56 (difference)`
-Set this number into the `startBalance` field of the JSON file.
+`2321.43 [Current Balance] - 1793.87 [Rolling Balance] = 527.56 [difference]`
+Set this calculation result into the `startBalance` field of the JSON file.
+
 
 ## Tips:
 - BTC: `1AUZ5tNu7awn2N6NCogwiVvx5QR3WrWjtk`
