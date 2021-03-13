@@ -1,6 +1,8 @@
 # Crypto-PNL-Tracker
 A generic crypto PNL tracker which can work with Binance, Bybit or your own data.
 
+<img src="https://raw.githubusercontent.com/drksheer/Crypto-PNL-Tracker/main/guides/Crypto-Tracker.png" target="Crypto Tracker" height="500">
+
 ## Requirements
 1. The actual Crypto Tracker app - [**grab the latest release**](https://github.com/drksheer/Crypto-PNL-Tracker/releases) and unzip it into a folder such as *C:\Bots\Tracker*.
 2. [Daisy's automatic import script](https://github.com/daisy613/accountData). Download the script and the settings file into the same folder as above.
