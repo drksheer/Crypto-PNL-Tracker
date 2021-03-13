@@ -48,3 +48,8 @@ This script generates a database for which the Crypto PNL tracker uses as a plug
     - *Multiple accounts:* You can setup multiple accounts by copying the entire account property from `{` to `}`, and pasting it again separating it by a comma.
 2. Run `PNLTracker.exe` this should launch a web server and your results will be available on http://localhost:5000 once all data has been imported.
 3. Keep Daisy's PowerShell script running in the background to automatically keep your data up-to-date.
+
+## Tips:
+- BTC: 1AUZ5tNu7awn2N6NCogwiVvx5QR3WrWjtk
+- USDT/ETH (ERC20): 0xecbc154b21af94740cec240a3334b927a92a49e9
+- USDT (TRC20): TLSvrkRysLP6MXQE9jBzfFxZCcRv9qf5w9 (if sending from Binance account - allows for less fees)
