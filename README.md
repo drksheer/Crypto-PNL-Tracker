@@ -53,6 +53,8 @@ Now you can proceed to the tracker setup.
 2. Run `PNLTracker.exe` this should launch a web server and your results will be available on http://localhost:5000 once all data has been imported.
 3. Keep Daisy's PowerShell script running in the background to automatically keep your data up-to-date.
 
+## You're Done!
+
 ### Troubleshooting
 If Rolling Balance/Cumulative Profit % does not match, or not what you expect, the tracker or the Binance API probably could not correctly determine your starting balance. So this must be set manually.
 This is done by a simple calculation,
