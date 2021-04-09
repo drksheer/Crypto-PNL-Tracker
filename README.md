@@ -17,9 +17,11 @@ A lot of configuration below uses the JSON-file format. **If you are new to this
 ### 2) Run Daisy's Binance/Bybit Data Import
 This script generates a database for which the Crypto PNL tracker uses as a plugin, so first step is importing your data.
 1. Download [Daisy's automatic import script](https://github.com/daisy613/accountData) the settings file into the tracker folder. Follow the setup instructions on that page.
-2. Run `accountData.ps1` from PowerShell as Administrator (Start menu -> PowerShell -> Right click, Run as Administrator). Navigate to the directory and type `.\accountData.ps1`.
-3. This will commence data import. **This may take up a while depending on how old the account is - about 10 mins per month of the account.** When the first import occurs, the green message will say "Import Complete". After that, it will continue to import every 10 minutes. Leave this process running to keep your data up to date.
-4. Now you can proceed to the tracker setup.
+2. From [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7.1) prompt as Administrator (Start menu -> PowerShell -> Right click, Run as Administrator) (you'll have this if you run Windows 10). Navigate to *C:\Bots\Tracker\db-files*, type and press enter on `.\accountData.ps1`.
+3. This will commence data import. **This may take up a while depending on how old the account is - about 10 mins per month of the account.** 
+
+When the first import occurs, the green message will say "Import Complete". After that, it will continue to import every 10 minutes. Leave this process running to keep your data up to date.
+Now you can proceed to the tracker setup.
 
 ### 2) Running the Tracker
 1. Edit the JSON file format `accounts.json` in the root of the Crypto Tracker.
