@@ -10,6 +10,9 @@ A generic crypto PNL tracker which can work with Binance, Bybit or your own data
 
 A lot of configuration below uses the JSON-file format. **If you are new to this, be careful not to disrupt the curly braces or double quotes or you might break things.**
 
+## Video Guides
+Video guides for installation and other troubleshooting now available: [**https://www.youtube.com/playlist?list=PLkZXfeWbs5zLUAseH9ORcONCTJpg02QYJ**](https://www.youtube.com/playlist?list=PLkZXfeWbs5zLUAseH9ORcONCTJpg02QYJ)
+
 ## Getting Started
 ### 1) Get the tracker
 1. Unzip the Crypto PNL tracker into a folder such as *C:\Bots\Tracker*
