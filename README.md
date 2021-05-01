@@ -37,6 +37,10 @@ When the first import occurs, the green message will say "Import Complete". Afte
                     "dbFileName": "db-files/accountData.db"
                 }
             ],
+            "discord": {
+                "webHookUrl": "",
+                "dailyReportTime": "7:00"
+            },
             "startBalance": null,
             "PNL": []
         }
@@ -44,6 +48,8 @@ When the first import occurs, the green message will say "Import Complete". Afte
         - Ensure `dbFileName` is set to the relative location to tracker root of where your database file is being generated (See setup instructions). Make sure to use the forward-slash character. Use the default value unless you have an advanced custom setup and you know what you are doing.
         - `accountName` is the same as specified in the `name` property in Daisy's `accountData.json`.
         - `fromDate` should be left null unless you wish to specify tracking to occur from a certain date on the chart. Eg. "2012-01-01" to only build the graph from 1st Jan onwards.
+        - `discord.weebHookUrl`: **(NEW)** Set this to your discord webhook if you want daily PNL reports!
+        - `discord.dailyReportTime`: **(NEW)** Set this to the time in hh:mm when you wish to receive the reports.
     - **If manually tracking:**
         - Edit the `"PNL"` value array manually setting a UTC-compatible date and decimal for each day.
     - *Multiple accounts:* You can setup multiple accounts by copying the entire account property from `{` to `}`, and pasting it again separating it by a comma.
