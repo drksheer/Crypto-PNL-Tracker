@@ -73,8 +73,6 @@ For the below screenshot, this is the formula
 
 <img src="https://raw.githubusercontent.com/drksheer/Crypto-PNL-Tracker/main/guides/balanceInconsistency.png" target="Crypto Tracker">
 
-
-## Tips:
-- BTC: `1AUZ5tNu7awn2N6NCogwiVvx5QR3WrWjtk`
-- USDT/ETH (ERC20): `0xecbc154b21af94740cec240a3334b927a92a49e9`
-- USDT (TRC20): `TLSvrkRysLP6MXQE9jBzfFxZCcRv9qf5w9` (if sending from Binance account - allows for less fees)
+## Donations/Tips:
+- USDT (TRC20): `TWhjv6ita4Y1i2xevTjxgB6g92yZLpkTwv`
+- BTC: `13nsGbe7A7K1SR2KpJHRPH9eArKf823T9o`
